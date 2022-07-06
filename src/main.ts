@@ -1,6 +1,6 @@
 import App from '@circlesland/frame-app/src/App.svelte';
 
-import { AUTH_API_URL } from '../config/api';
+import { AUTH_API_CALLBACK, AUTH_API_URL } from '../config/api';
 
 import type { ICirclesCustomWindow } from "@circlesland/frame-app/types/types";
 declare global {
@@ -9,7 +9,10 @@ declare global {
 
 window.authApi = {
   login: () => {
-    window.location.assign(AUTH_API_URL);
+    const redirectUrl = new URL(AUTH_API_URL);
+    redirectUrl.searchParams.set("callback", AUTH_API_CALLBACK);
+    redirectUrl.searchParams.set("platform", "web");
+    window.location.assign(redirectUrl.toString());
   },
   logout: () => {
     localStorage.removeItem("privateKey");
