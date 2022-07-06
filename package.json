@@ -23,6 +23,6 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "frame-app": "file:../../frame-app"
+    "@circlesland/frame-app": "^0.0.1"
   }
 }
