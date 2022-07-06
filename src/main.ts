@@ -15,10 +15,7 @@ window.authApi = {
     localStorage.removeItem("privateKey");
     localStorage.removeItem("openlogin_store");
   },
-  processAuth: (window) => {
-    const _url = new URL(window.location.toString());
-    const userDataParam = _url.searchParams.get("user_data");
-
+  processAuth: (userDataParam) => {
     try {
       if (userDataParam) {
         const userDataJson = JSON.parse(atob(userDataParam));
@@ -28,6 +25,7 @@ window.authApi = {
           });
         }
 
+        const _url = new URL(window.location.toString());
         _url.searchParams.delete("user_data");
         window.location.assign(_url.toString());
 
