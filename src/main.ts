@@ -1,4 +1,4 @@
-import App from 'frame-app/src/App.svelte';
+import App from '@circlesland/frame-app/src/App.svelte';
 
 import { AUTH_API_URL } from '../config/api';
 
