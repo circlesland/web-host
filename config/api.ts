@@ -1,1 +1,1 @@
-export const AUTH_API_URL = "http://localhost:3001";
+export const AUTH_API_URL = "https://auth-provider.vercel.app";
