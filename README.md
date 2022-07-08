@@ -7,3 +7,7 @@ The `web-host` app will require the `@circlesland/frame-app` as a dependency and
 ## Getting Started
 
 Check the [@circlesland/frame-app](https://github.com/circlesland/frame-app) README for getting started.
+
+## Run with following ENV Vars:
+VITE_AUTH_API_URL=http://localhost:3001
+VITE_AUTH_CALLBACK=http://localhost:3000
