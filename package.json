@@ -24,6 +24,6 @@
     "sass": "^1.53.0"
   },
   "dependencies": {
-    "@circlesland/frame-app": "^0.0.3"
+    "@circlesland/frame-app": "^0.0.5"
   }
 }

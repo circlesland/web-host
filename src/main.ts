@@ -11,10 +11,13 @@ declare global {
 }
 
 window.authApi = {
-  login: () => {
+  login: (testAccount?: number) => {
     const redirectUrl = new URL(AUTH_API_URL);
     redirectUrl.searchParams.set("callback", AUTH_API_CALLBACK);
     redirectUrl.searchParams.set("platform", "web");
+    if (testAccount !== undefined && testAccount !== null) {
+      redirectUrl.searchParams.set("test_account", `${testAccount}`);
+    }
     window.location.assign(redirectUrl.toString());
   },
   logout: () => {
